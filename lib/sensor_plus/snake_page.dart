@@ -245,6 +245,7 @@ class _SnakePageState extends State<SnakePage> {
           _userAccelerometerUpdateTime = now;
         },
         onError: (e) {
+          if (!mounted) return;
           showDialog(
               context: context,
               builder: (context) {
@@ -274,6 +275,7 @@ class _SnakePageState extends State<SnakePage> {
           _accelerometerUpdateTime = now;
         },
         onError: (e) {
+          if (!mounted) return;
           showDialog(
               context: context,
               builder: (context) {
@@ -303,6 +305,7 @@ class _SnakePageState extends State<SnakePage> {
           _gyroscopeUpdateTime = now;
         },
         onError: (e) {
+          if (!mounted) return;
           showDialog(
               context: context,
               builder: (context) {
@@ -332,6 +335,7 @@ class _SnakePageState extends State<SnakePage> {
           _magnetometerUpdateTime = now;
         },
         onError: (e) {
+          if (!mounted) return;
           showDialog(
               context: context,
               builder: (context) {
@@ -361,6 +365,7 @@ class _SnakePageState extends State<SnakePage> {
           _barometerUpdateTime = now;
         },
         onError: (e) {
+          if (!mounted) return;
           showDialog(
               context: context,
               builder: (context) {
