@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-Widget myButton(BuildContext  context, VoidCallback function) {
+Widget myButton(String title, VoidCallback function) {
   return ElevatedButton(
     onPressed: function,
-    child: const Text('Counter Page'),
+    child: Text(title),
   );
 }

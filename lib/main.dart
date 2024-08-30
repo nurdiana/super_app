@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:super_app/counter_page.dart';
+import 'package:super_app/sensor_plus/snake_page.dart';
 import 'package:super_app/widget/my_button.dart';
 
 void main() {
@@ -95,13 +96,26 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             myButton(
-              context,
+              "Counter Page",
               () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const CounterPage(
                       title: "Counter Page",
+                    ),
+                  ),
+                );
+              },
+            ),
+            myButton(
+              "Snake Page",
+              () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const SnakePage(
+                      title: "Snake Page",
                     ),
                   ),
                 );
