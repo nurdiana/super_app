@@ -4,6 +4,8 @@ import 'package:super_app/counter_page.dart';
 import 'package:super_app/sensor_plus/snake_page.dart';
 import 'package:super_app/widget/my_button.dart';
 
+import 'openstreetmap_widget.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -129,6 +131,22 @@ class _MyHomePageState extends State<MyHomePage> {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const Compass(),
+                  ),
+                );
+              },
+            ),
+            myButton(
+              "OpenStreetMap",
+              () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OpenStreetMapWidget(
+                      latitude: 48.8588443,
+                      longitude: 2.2943506,
+                      zoom: 13.0,
+                      useCurrentLocation: true,
+                    ),
                   ),
                 );
               },
