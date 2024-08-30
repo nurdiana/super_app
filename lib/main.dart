@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:super_app/compass.dart';
 import 'package:super_app/counter_page.dart';
 import 'package:super_app/sensor_plus/snake_page.dart';
 import 'package:super_app/widget/my_button.dart';
@@ -117,6 +118,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     builder: (context) => const SnakePage(
                       title: "Snake Page",
                     ),
+                  ),
+                );
+              },
+            ),
+            myButton(
+              "Compass",
+              () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Compass(),
                   ),
                 );
               },
