@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:super_app/compass.dart';
 import 'package:super_app/counter_page.dart';
+import 'package:super_app/query_all_package.dart';
 import 'package:super_app/sensor_plus/snake_page.dart';
 import 'package:super_app/widget/my_button.dart';
 
@@ -149,6 +150,17 @@ class _MyHomePageState extends State<MyHomePage> {
                           zoom: 13.0,
                           useCurrentLocation: true,
                         ),
+                      ),
+                    );
+                  },
+                ),
+                myButton(
+                  "Query All Package",
+                  () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const QueryAllPackage(),
                       ),
                     );
                   },
